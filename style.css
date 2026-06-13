@@ -1,0 +1,389 @@
+/* =============================================
+   RESET Y BASE
+   ============================================= */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* navegación suave entre secciones */
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #d4d4d4;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =============================================
+   BARRA DE NAVEGACIÓN
+   ============================================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 0.5px solid #1f1f1f;
+}
+
+nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav-nombre {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  font-size: 13px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* =============================================
+   SECCIÓN HÉROE
+   ============================================= */
+.hero {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 24px 72px;
+  border-bottom: 0.5px solid #1a1a1a;
+}
+
+.etiqueta {
+  font-size: 12px;
+  color: #4ade80;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.bio {
+  font-size: 15px;
+  color: #888;
+  max-width: 560px;
+  margin-bottom: 32px;
+}
+
+.hero-botones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-primario {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-primario:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-secundario {
+  border: 0.5px solid #333;
+  color: #aaa;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-secundario:hover {
+  border-color: #666;
+  color: #fff;
+}
+
+/* =============================================
+   SECCIONES GENERALES
+   ============================================= */
+.seccion {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  border-bottom: 0.5px solid #1a1a1a;
+}
+
+.fondo-alt {
+  background-color: #0d0d0d;
+  max-width: 100%;
+}
+
+.fondo-alt > * {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fondo-alt.seccion {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.fondo-alt.seccion h2,
+.fondo-alt.seccion .descripcion-seccion,
+.fondo-alt.seccion .tags-grid,
+.fondo-alt.seccion .lista-links {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.seccion h2 {
+  font-size: 11px;
+  color: #4ade80;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.descripcion-seccion {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* =============================================
+   TARJETAS DE EDUCACIÓN
+   ============================================= */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.tarjeta {
+  background-color: #111;
+  border: 0.5px solid #1f1f1f;
+  border-radius: 12px;
+  padding: 24px;
+  transition: border-color 0.2s;
+}
+
+.tarjeta:hover {
+  border-color: #333;
+}
+
+.año {
+  font-size: 11px;
+  color: #4ade80;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #e5e5e5;
+  margin-bottom: 4px;
+}
+
+.tarjeta p {
+  font-size: 13px;
+  color: #666;
+}
+
+.detalle {
+  margin-top: 10px;
+  font-size: 12px !important;
+  color: #444 !important;
+  line-height: 1.6;
+}
+
+/* =============================================
+   TAGS DE HABILIDADES
+   ============================================= */
+.tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.tag {
+  background-color: #111;
+  border: 0.5px solid #222;
+  color: #777;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.tag:hover {
+  border-color: #444;
+  color: #ccc;
+}
+
+/* =============================================
+   LISTA DE LINKS (profesores y compañeros)
+   ============================================= */
+.lista-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #111;
+  border: 0.5px solid #1f1f1f;
+  border-radius: 10px;
+  padding: 14px 18px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.link-card:hover {
+  border-color: #333;
+  background-color: #161616;
+}
+
+.link-icono {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.link-card div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.link-card strong {
+  font-size: 14px;
+  color: #d4d4d4;
+  font-weight: 500;
+}
+
+.link-card span {
+  font-size: 12px;
+  color: #555;
+}
+
+.flecha {
+  color: #333;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.link-card:hover .flecha {
+  color: #666;
+}
+
+/* =============================================
+   SECCIÓN CONTACTO
+   ============================================= */
+.contacto-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #111;
+  border: 0.5px solid #1f1f1f;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 14px;
+  color: #888;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.contacto-item:hover {
+  border-color: #333;
+  color: #e5e5e5;
+}
+
+/* =============================================
+   PIE DE PÁGINA
+   ============================================= */
+footer {
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 12px;
+  color: #333;
+}
+
+footer a {
+  color: #444;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #888;
+}
+
+/* =============================================
+   RESPONSIVE (celular)
+   ============================================= */
+@media (max-width: 600px) {
+  nav ul {
+    gap: 14px;
+  }
+  nav ul li a {
+    font-size: 11px;
+  }
+  .hero {
+    padding: 48px 20px 48px;
+  }
+}
